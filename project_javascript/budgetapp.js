@@ -1,4 +1,4 @@
-// URL: https://www.youtube.com/watch?v=m_HJ3juuFvo
+
 
 class UI {
     constructor() {
@@ -18,11 +18,10 @@ class UI {
       this.itemID = 0;
     }
     
-    // submit budget
+    
     submitBudgetForm() {
       const value = this.budgetInput.value;
-      
-      // display feedback
+    
       if (value === '' || value < 0) {
         this.budgetFeedback.classList.add('showItem');
         this.budgetFeedback.innerHTML = '<p>value cannot be empty or negative</p>';
@@ -37,7 +36,7 @@ class UI {
       }
     }
     
-    // show balance
+    
     showBalance() {
       const expense = this.totalExpense();
       const total = parseInt(this.budgetAmount.textContent) - expense;
@@ -77,7 +76,7 @@ class UI {
         this.expenseInput.value = '';
         this.amountInput.value = '';
         
-        // add to expense list
+    
         const expense = {
           id: this.itemID,
           title: expenseValue,
@@ -91,7 +90,7 @@ class UI {
       }
     }
     
-    // add expense
+    
     addExpense(expense) {
       const div = document.createElement('div');
       div.classList.add('expense');
@@ -112,7 +111,7 @@ class UI {
       this.expenseList.appendChild(div);
     }
     
-    // total expense
+    
     totalExpense() {
       let total = 0;
       
